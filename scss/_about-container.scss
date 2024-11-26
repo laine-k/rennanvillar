@@ -1,0 +1,30 @@
+.about-container {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    .vertical-line {
+        width: 2px; /* Thickness of the line */
+        height: 70px; /* Length of the line */
+        background-color: rgb(77, 43, 14); /* Line color */
+        margin: 20px auto; /* Center vertically with some spacing */
+        display: block; /* Make it a block element */
+    }
+
+    .about-box {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: 5em;
+            .flex-box {
+                width: 50%;
+            }
+        }
+        .profile-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

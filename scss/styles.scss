@@ -89,6 +89,8 @@ $success: #7952b3;
 
 @import "icon-list";
 @import "custom-navbar";
+@import "about-container";
+@import "category-container";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 
 body {
@@ -109,7 +111,7 @@ body {
 }
 
 .header-box {
-  background-image: url("assets/header.jpg");
+  background-image: url("assets/header-mobile.jpg");
   background-repeat: no-repeat;
   height: 400px;
   background-position: center;
@@ -117,9 +119,12 @@ body {
   background-size: cover;
   @media (min-width: 768px) {
     background-position: left;
+    background-image: url("assets/header.jpg");
   }
 }
 .h1,
+.h2,
+.h3,
 .h4 {
   font-family: "Merriweather", Sans-serif;
   color: $body-color;
