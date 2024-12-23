@@ -34,7 +34,7 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
 // Customize some defaults
 $body-color: #e7e7e7;
-$body-bg: #000000;
+
 $border-radius: 0.4rem;
 $success: #7952b3;
 
@@ -95,8 +95,20 @@ $success: #7952b3;
 
 body {
   padding: 1.5rem;
-  background-color: $body-bg;
+  background:
+    linear-gradient(rgba(0, 51, 25, 0.7), rgba(0, 102, 51, 0.5)),
+    radial-gradient(circle at 40% 60%, rgba(34, 139, 34, 0.4), transparent),
+    url("assets/forest-bg.jpg") no-repeat center center fixed; /* Add your forest image */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-blend-mode: multiply; /* Blend the image with the gradient */
+  background-color: #0b3d32; /* Base dark forest green */
   color: $body-color;
+}
+.body-container {
+  background-color: black;
+  box-shadow:
+    0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .logo-box {
   display: flex;

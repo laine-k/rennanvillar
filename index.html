@@ -7,110 +7,134 @@
     <title>Bootstrap Sass &amp; ESM JS</title>
   </head>
   <body>
-    
-    <nav class="d-block d-md-none navbar navbar-expand-lg bg-dark border-body" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img
-          src="css/assets/logo-color-text.png"          
-          alt="Logo"
-          class="navbarLogo"
-        /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>         
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Portfolio
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Knives</a></li>
-                <li><a class="dropdown-item" href="#">Pipes and cigar accessories</a></li>
-                <li><a class="dropdown-item" href="#">Leather</a></li>
-                <li><a class="dropdown-item" href="#">Jewelry</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-          </ul>
+    <div class="container body-container">
+      <nav
+        class="d-block d-md-none navbar navbar-expand-lg bg-dark border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="css/assets/logo-color-text.png"
+              alt="Logo"
+              class="navbarLogo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Knives</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Pipes and cigar accessories</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Leather</a></li>
+                  <li><a class="dropdown-item" href="#">Jewelry</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <div class="logo-box">
-      <img
+      </nav>
+      <div class="logo-box">
+        <img
           src="css/assets/logo-color-text.png"
           class="top-logo d-none d-md-block"
           alt="Logo"
         />
-    </div>
-    <nav class="custom-navbar">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li>
-          <a href="#">Portfolio</a>
-          <ul class="custom-dropdown-menu">
-            <li><a href="knives.html">Knives</a></li>
-            <li><a href="#">Pipes and cigar accessories</a></li>
-            <li><a href="#">Leather</a></li>
-            <li><a href="#">Jewelry</a></li>
-          </ul>
-        </li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-    <div class="header-box">
-
-      <div class="container flex-box">
-        <h1 class="h1">Rennan Villar</h1>
-        <h4 class="h4">Designer. Maker. Artist.</h4>
+      </div>
+      <nav class="custom-navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Portfolio</a>
+            <ul class="custom-dropdown-menu">
+              <li><a href="knives.html">Knives</a></li>
+              <li><a href="#">Pipes and cigar accessories</a></li>
+              <li><a href="#">Leather</a></li>
+              <li><a href="#">Jewelry</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-box">
+        <div class="container flex-box">
+          <h1 class="h1">Rennan Villar</h1>
+          <h4 class="h4">Designer. Maker. Artist.</h4>
         </div>
-    </div>
-    <div class="category-container">     
-        <a class="category-box knives" href="knives.html">         
+      </div>
+      <div class="category-container container">
+        <a class="category-box knives" href="knives.html">
           <h4 class="h4">knives</h4>
         </a>
-        <a class="category-box pipes" href="knives.html">         
+        <a class="category-box pipes" href="knives.html">
           <h4 class="h4">pipes</h4>
         </a>
-        <a class="category-box jewelry" href="knives.html">         
+        <a class="category-box jewelry" href="knives.html">
           <h4 class="h4">jewelry</h4>
         </a>
-        <a class="category-box leather" href="knives.html">         
+        <a class="category-box leather" href="knives.html">
           <h4 class="h4">leather</h4>
         </a>
-    </div>
-  
-    
-
-    <div class="about-container container">
-      
-      <div class="about-box">
-        <div class="flex-box">
-          <h2 class="h2">I’m proud to share my creations with you, each item is thoughtfully designed and crafted with care.  </h2>
-          <p class="text-muted"> I create unique, handcrafted items that are both beautiful and functional. My work is inspired by nature, history, and the world around me. I use a variety of materials and techniques to bring my ideas to life, from traditional woodworking and metalworking to modern digital design and fabrication. </p>
-          
-        </div>
-        <div class="flex-box">
-          <img class="profile-image" src="css/assets/images/profile-rennan-villar.jpg" alt="profile-rennan-villar"/>
-        </div>
-        
       </div>
-      
-    </div>
 
-
+      <div class="about-container container">
+        <div class="about-box">
+          <div class="flex-box">
+            <h2 class="h2">
+              I’m proud to share my creations with you, each item is
+              thoughtfully designed and crafted with care.
+            </h2>
+            <p class="text-muted">
+              I create unique, handcrafted items that are both beautiful and
+              functional. My work is inspired by nature, history, and the world
+              around me. I use a variety of materials and techniques to bring my
+              ideas to life, from traditional woodworking and metalworking to
+              modern digital design and fabrication.
+            </p>
+          </div>
+          <div class="flex-box">
+            <img
+              class="profile-image"
+              src="css/assets/images/profile-rennan-villar.jpg"
+              alt="profile-rennan-villar"
+            />
+          </div>
+        </div>
+      </div>
 
       <hr class="mt-5 mb-4" />
 
-      <p class="text-muted">
-        Copyright © 2024 Rennan Villar
-      </p>
+      <p class="text-muted">Copyright © 2024 Rennan Villar</p>
     </div>
 
     <script
@@ -136,6 +160,5 @@
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
   </body>
 </html>
