@@ -4,39 +4,73 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Bootstrap Sass &amp; ESM JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Rennan Villar - knives</title>
   </head>
   <body>
-    
-    <nav class="d-block d-md-none navbar navbar-expand-lg bg-dark border-body" data-bs-theme="dark">
+    <nav
+      class="d-block d-md-none navbar navbar-expand-lg bg-dark border-body"
+      data-bs-theme="dark"
+    >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img
-          src="css/assets/logo-color-text.png"          
-          alt="Logo"
-          class="navbarLogo"
+        <a class="navbar-brand" href="#"
+          ><img
+            src="css/assets/logo-color-text.png"
+            alt="Logo"
+            class="navbarLogo"
         /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>         
-            
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >HOME</a
+              >
+            </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Portfolio
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                PORTFOLIO
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Knives</a></li>
-                <li><a class="dropdown-item" href="#">Pipes and cigar accessories</a></li>
+                <li>
+                  <a class="dropdown-item" href="pipes.html"
+                    >Pipes and cigar accessories</a
+                  >
+                </li>
                 <li><a class="dropdown-item" href="#">Leather</a></li>
                 <li><a class="dropdown-item" href="#">Jewelry</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="about.html">ABOUT</a>
             </li>
           </ul>
         </div>
@@ -44,76 +78,304 @@
     </nav>
     <div class="logo-box">
       <img
-          src="css/assets/logo-color-text.png"
-          class="top-logo d-none d-md-block"
-          alt="Logo"
-        />
+        src="css/assets/logo-color-text.png"
+        class="top-logo d-none d-md-block"
+        alt="Logo"
+      />
     </div>
-    <nav class="custom-navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="#">Portfolio</a>
-          <ul class="custom-dropdown-menu">
-            <li><a href="#">Knives</a></li>
-            <li><a href="#">Pipes and cigar accessories</a></li>
-            <li><a href="#">Leather</a></li>
-            <li><a href="#">Jewelry</a></li>
-          </ul>
-        </li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-   
+    <div class="body-container">
+      <nav class="custom-navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Portfolio</a>
+            <ul class="custom-dropdown-menu">
+              <li><a href="knives.html">Knives</a></li>
+              <li><a href="pipes.html">Pipes and cigar accessories</a></li>
+              <li><a href="#">Leather</a></li>
+              <li><a href="#">Jewelry</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
       <div class="filter-buttons">
-        <button type="button" data-filter="all" class="outline-button active">All</button>
-        <button type="button" data-filter="knives" class="outline-button">Knives</button>
-        <button type="button" data-filter="pipes" class="outline-button">Pipes</button>
-        <button type="button" data-filter="cigar-accessories" class="outline-button">Cigar accessories</button>
-        <button type="button" data-filter="leather" class="outline-button">Leather</button>
+        <button
+          type="button"
+          data-filter="all"
+          class="outline-button filter-button active"
+        >
+          All
+        </button>
+        <button
+          type="button"
+          data-filter="kitchen"
+          class="outline-button filter-button"
+        >
+          Kitchen
+        </button>
+        <button
+          type="button"
+          data-filter="edc"
+          class="outline-button filter-button"
+        >
+          EDC
+        </button>
+        <button
+          type="button"
+          data-filter="survival"
+          class="outline-button filter-button"
+        >
+          Bushcraft
+        </button>
       </div>
 
-      <div class="grid">
+      <div class="grid" id="grid-container">
         <div class="grid-sizer"></div>
-        <div class="grid-item knives">
+
+        <div class="grid-item edc">
+          <img src="css\assets\images\knives\edc\1.jpg" alt="1.jpg" />
+        </div>
+        <div class="grid-item kitchen">
           <img
-          src="css/assets/images/knives/chefs_knife_1.jpg"
-        /></div>
-        <div class="grid-item knives"><img
-          src="css/assets/images/knives/chefs_knife_2.jpg"
-        /></div>
-        <div class="grid-item knives"><img
-          src="css/assets/images/knives/1.jpg"
-        /></div>
-        <div class="grid-item knives"><img
-          src="css/assets/images/knives/handcrafted-pink-knife.jpg"
-        /></div>
-        <div class="grid-item pipes"><img
-          src="css/assets/images/pipes/handcrafted-briar-pipe.jpg"
-        /></div>
-        <div class="grid-item pipes"><img
-          src="css/assets/images/pipes/handcrafted-briar-pipe-2.jpg"
-        /></div>
-        <div class="grid-item knives"><img
-          src="css/assets/images/knives/2.jpg"
-        /></div>
-        <div class="grid-item knives"><img
-          src="css/assets/images/knives/3.jpg"
-        /></div>
-        <div class="grid-item knives"><img
-          src="css/assets/images/knives/4.jpg"
-        /></div>
-        <div class="grid-item pipes"><img
-          src="css/assets/images/pipes/handcrafted-briar-pipe-3.jpg"
-        /></div>
+            src="css\assets\images\knives\kitchen\chefs_knife_1.jpg"
+            alt="chefs_knife_1.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img src="css\assets\images\knives\edc\2.jpg" alt="2.jpg" />
+        </div>
+
+        <div class="grid-item edc">
+          <img src="css\assets\images\knives\edc\3.jpg" alt="3.jpg" />
+        </div>
+
+        <div class="grid-item edc">
+          <img src="css\assets\images\knives\edc\4.jpg" alt="4.jpg" />
+        </div>
+
+        <div class="grid-item kitchen">
+          <img
+            src="css\assets\images\knives\kitchen\chefs_knife_2.jpg"
+            alt="chefs_knife_2.jpg"
+          />
+        </div>
+        <div class="grid-item survival">
+          <img
+            src="css\assets\images\knives\survival\handcrafted-leuku-knife.jpg"
+            alt="handcrafted-leuku-knife.jpg"
+          />
+        </div>
+
+        <div class="grid-item survival">
+          <img
+            src="css\assets\images\knives\survival\leuku_knife1.jpg"
+            alt="leuku_knife1.jpg"
+          />
+        </div>
+
+        <div class="grid-item survival">
+          <img
+            src="css\assets\images\knives\survival\leuku_knife3.jpg"
+            alt="leuku_knife3.jpg"
+          />
+        </div>
+
+        <div class="grid-item survival">
+          <img
+            src="css\assets\images\knives\survival\leuku_knifes_beech_wood_with_birch.jpg"
+            alt="leuku_knifes_beech_wood_with_birch.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_caviuna_wood.jpg"
+            alt="EDC_caviuna_wood.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_green_G10.jpg"
+            alt="EDC_green_G10.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_jakaranda_wood.jpg"
+            alt="EDC_jakaranda_wood.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_kwaiken_tanto_glow_in_dark.jpg"
+            alt="EDC_kwaiken_tanto_glow_in_dark.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_medium_textured_G10.jpg"
+            alt="EDC_medium_textured_G10.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_medium_wharncliffe.jpg"
+            alt="EDC_medium_wharncliffe.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_medium_with_image_on_blade_JUMA.jpg"
+            alt="EDC_medium_with_image_on_blade_JUMA.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_paracord.jpg"
+            alt="EDC_paracord.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_paracord_with_snake_skin.jpg"
+            alt="EDC_paracord_with_snake_skin.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_purple_snake_juma.jpg"
+            alt="EDC_purple_snake_juma.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_small_2nd_model_acrilic.jpg"
+            alt="EDC_small_2nd_model_acrilic.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_small_2nd_model_G10.jpg"
+            alt="EDC_small_2nd_model_G10.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_small_black_JUMA.jpg"
+            alt="EDC_small_black_JUMA.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_small_blue_JUMA_handle.jpg"
+            alt="EDC_small_blue_JUMA_handle.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_small_many_colors.jpg"
+            alt="EDC_small_many_colors.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\EDC_small_pau_brazil_wood.jpg"
+            alt="EDC_small_pau_brazil_wood.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\handcrafted-pink-knife.jpg"
+            alt="handcrafted-pink-knife.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_black_cottoncord_kiridashi.jpg"
+            alt="small_black_cottoncord_kiridashi.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_black_kiridashi2.jpg"
+            alt="small_black_kiridashi2.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_black_kiridashi3.jpg"
+            alt="small_black_kiridashi3.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_blue_kiridashi.jpg"
+            alt="small_blue_kiridashi.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_brown_kiridashi.jpg"
+            alt="small_brown_kiridashi.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_green_kiridashi.jpg"
+            alt="small_green_kiridashi.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_multi_color_kiridashi.jpg"
+            alt="small_multi_color_kiridashi.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_orange_microcord_kiridashi.jpg"
+            alt="small_orange_microcord_kiridashi.jpg"
+          />
+        </div>
+
+        <div class="grid-item edc">
+          <img
+            src="css\assets\images\knives\edc\small_pink_kiridashi.jpg"
+            alt="small_pink_kiridashi.jpg"
+          />
+        </div>
       </div>
 
-
-      <hr class="mt-5 mb-4" />
-
-      <p class="text-muted">
-        Copyright © 2024 Rennan Villar
-      </p>
+      <div class="footer">
+        <span class="text-muted">Copyright © 2025 Rennan Villar</span>
+      </div>
     </div>
 
     <script
@@ -138,6 +400,5 @@
     </script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
-
   </body>
 </html>
