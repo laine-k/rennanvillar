@@ -4,10 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Bootstrap Sass &amp; ESM JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Rennan Villar</title>
   </head>
   <body>
-    <div class="container body-container">
+    <div class="logo-box">
+      <img
+        src="css/assets/logo-color-text.png"
+        class="top-logo d-none d-md-block"
+        alt="Logo"
+      />
+    </div>
+    <div class="body-container">
       <nav
         class="d-block d-md-none navbar navbar-expand-lg bg-dark border-body"
         data-bs-theme="dark"
@@ -33,7 +51,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -44,7 +62,7 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Portfolio
+                  PORTFOLIO
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Knives</a></li>
@@ -58,19 +76,12 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">ABOUT</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div class="logo-box">
-        <img
-          src="css/assets/logo-color-text.png"
-          class="top-logo d-none d-md-block"
-          alt="Logo"
-        />
-      </div>
       <nav class="custom-navbar">
         <ul>
           <li><a href="#">Home</a></li>
@@ -106,8 +117,65 @@
           <h4 class="h4">leather</h4>
         </a>
       </div>
+      <div class="categories-desktop">
+        <div class="image-box knives"></div>
+        <div class="text-box">
+          <h4 class="h4">Knives</h4>
+          Discover the craftsmanship behind my handcrafted custom knives, each
+          designed with precision and built to last. Every knife is a unique
+          creation, blending beauty and functionality. With a lifetime warranty,
+          I ensure the highest quality and durability in every blade. Each knife
+          is crafted to be a reliable, timeless tool for years to come.
+          <br />
+          <button type="button" data-filter="all" class="outline-button">
+            Discover My Knives
+          </button>
+        </div>
+      </div>
+      <div class="categories-desktop">
+        <div class="text-box light">
+          <h4 class="h4">Pipes</h4>
+          Discover my handcrafted pipes made from premium briar wood, each
+          created with passion and artistry. I also design modern cigar
+          accessories using durable titanium, offering custom pieces in a range
+          of colors to match your unique style.
+          <br />
+          <button type="button" data-filter="all" class="outline-button">
+            Discover My Pipes and Cigar Accessories
+          </button>
+        </div>
+        <div class="image-box pipes"></div>
+      </div>
+      <div class="categories-desktop">
+        <div class="image-box jewellery"></div>
+        <div class="text-box">
+          <h4 class="h4">Jewellery</h4>
+          Discover custom-made jewelry crafted from titanium and silver,
+          designed to reflect your unique style. The lightweight materials offer
+          exceptional comfort, while the colors can be personalized to match
+          your individual taste, creating timeless pieces.
+          <br />
+          <button type="button" data-filter="all" class="outline-button">
+            Discover My Jewellery
+          </button>
+        </div>
+      </div>
+      <div class="categories-desktop">
+        <div class="text-box light">
+          <h4 class="h4">Leather</h4>
+          Explore my collection of handcrafted leather goods, including passport
+          holders and a variety of wallet styles. Each piece can be personalized
+          with your initials, adding a unique touch to these timeless, durable
+          accessories.
+          <br />
+          <button type="button" data-filter="all" class="outline-button">
+            Discover My Leather Accessories
+          </button>
+        </div>
+        <div class="image-box leather"></div>
+      </div>
 
-      <div class="about-container container">
+      <div class="about-container">
         <div class="about-box">
           <div class="flex-box">
             <h2 class="h2">
@@ -132,9 +200,9 @@
         </div>
       </div>
 
-      <hr class="mt-5 mb-4" />
-
-      <p class="text-muted">Copyright © 2024 Rennan Villar</p>
+      <div class="footer">
+        <span class="text-muted">Copyright © 2025 Rennan Villar</span>
+      </div>
     </div>
 
     <script
