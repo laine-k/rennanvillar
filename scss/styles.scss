@@ -97,14 +97,17 @@ body {
   background-color: black; /* Base dark forest green */
   color: $body-color;
   font-family: "Lora", serif;
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     background:
       linear-gradient(rgba(0, 51, 25, 0.3), rgba(0, 102, 51, 0.3)),
       radial-gradient(circle at 40% 60%, rgba(34, 139, 34, 0.3), transparent),
-      url("assets/forest.jpg") no-repeat center center fixed; /* Add your forest image */
-    background-size: cover; /* Ensure the image covers the entire screen */
-    background-blend-mode: overlay, multiply; /* Blend the image with the gradient */
-    background-color: #0b3d322f; /* Base dark forest green */
+      url("assets/forest2.jpg") no-repeat center center fixed; 
+    background-size: cover; 
+    background-blend-mode: overlay, multiply; 
+    background-color: #0b3d322f; 
+  }  */
+  p {
+    font-size: 20px;
   }
 }
 .body-container {
@@ -113,6 +116,11 @@ body {
     0 19px 38px rgba(0, 0, 0, 0.3),
     0 15px 12px rgba(0, 0, 0, 0.22);
   z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.container-box {
   margin-left: auto;
   margin-right: auto;
   padding: 1.5rem;
@@ -167,7 +175,7 @@ body {
 .h4 {
   font-family: "Lora", serif;
   color: $body-color;
-  font-weight: 200;
+  font-weight: 500;
 }
 .flex-box {
   display: flex;
@@ -189,6 +197,7 @@ body {
   //top: 0; /* This will make the element stick at the top */
   background-color: black;
   padding: 10px;
+  flex-wrap: wrap;
 }
 .outline-button {
   border: 2px solid black;
@@ -216,6 +225,9 @@ body {
 }
 /* ---- grid ---- */
 /* clear fix */
+.grid {
+  margin-left: 20px;
+}
 .grid:after {
   content: "";
   display: block;
@@ -245,7 +257,18 @@ body {
 .footer {
   padding: 1em 5em;
   text-align: center;
+  .instagram_icon {
+    margin-left: 0.5em;
+    padding-bottom: 3px;
+    height: 27px;
+  }
 }
 .link {
   color: white;
+}
+.navbar {
+  background-color: black !important;
+}
+.navbar-toggler {
+  border: none;
 }

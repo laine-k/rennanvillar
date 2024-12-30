@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
     <title>Rennan Villar</title>
   </head>
   <body>
@@ -23,7 +23,7 @@
       data-bs-theme="dark"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="index.html"
           ><img
             src="css/assets/logo-color-text.png"
             alt="Logo"
@@ -59,14 +59,16 @@
                 PORTFOLIO
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Knives</a></li>
+                <li><a class="dropdown-item" href="knives.html">Knives</a></li>
                 <li>
                   <a class="dropdown-item" href="pipes.html"
                     >Pipes and cigar accessories</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="#">Leather</a></li>
-                <li><a class="dropdown-item" href="#">Jewelry</a></li>
+
+                <li>
+                  <a class="dropdown-item" href="jewelry.html">Jewellery</a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -92,8 +94,8 @@
             <ul class="custom-dropdown-menu">
               <li><a href="knives.html">Knives</a></li>
               <li><a href="pipes.html">Pipes and cigar accessories</a></li>
-              <li><a href="#">Leather</a></li>
-              <li><a href="#">Jewelry</a></li>
+
+              <li><a href="jewelry.html">Jewellery</a></li>
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
@@ -109,20 +111,17 @@
         <a class="category-box knives" href="knives.html">
           <h4 class="h4">knives</h4>
         </a>
-        <a class="category-box pipes" href="knives.html">
+        <a class="category-box pipes" href="pipes.html">
           <h4 class="h4">pipes</h4>
         </a>
-        <a class="category-box jewelry" href="knives.html">
-          <h4 class="h4">jewelry</h4>
-        </a>
-        <a class="category-box leather" href="knives.html">
-          <h4 class="h4">leather</h4>
+        <a class="category-box jewelry" href="jewelry.html">
+          <h4 class="h4">jewellery</h4>
         </a>
       </div>
       <div class="categories-desktop">
         <div class="image-box knives"></div>
         <div class="text-box">
-          <h4 class="h4">Knives</h4>
+          <h2 class="h2">Knives</h2>
           Discover the craftsmanship behind my handcrafted custom knives, each
           designed with precision and built to last. Every knife is a unique
           creation, blending beauty and functionality. With a lifetime warranty,
@@ -138,14 +137,14 @@
       </div>
       <div class="categories-desktop">
         <div class="text-box light">
-          <h4 class="h4">Pipes</h4>
+          <h2 class="h2">Pipes</h2>
           Discover my handcrafted pipes made from premium briar wood, each
           created with passion and artistry. I also design modern cigar
           accessories using durable titanium, offering custom pieces in a range
           of colors to match your unique style.
           <br />
           <a href="pipes.html">
-            <button type="button" data-filter="all" class="outline-button">
+            <button type="button" data-filter="all" class="outline-button dark">
               Discover My Pipes and Cigar Accessories
             </button>
           </a>
@@ -155,33 +154,21 @@
       <div class="categories-desktop">
         <div class="image-box jewellery"></div>
         <div class="text-box">
-          <h4 class="h4">Jewellery</h4>
+          <h2 class="h2">Jewellery</h2>
           Discover custom-made jewelry crafted from titanium and silver,
           designed to reflect your unique style. The lightweight materials offer
           exceptional comfort, while the colors can be personalized to match
           your individual taste, creating timeless pieces.
           <br />
-          <button type="button" data-filter="all" class="outline-button">
-            Discover My Jewellery
-          </button>
+          <a href="jewelry.html">
+            <button type="button" data-filter="all" class="outline-button">
+              Discover My Jewellery
+            </button></a
+          >
         </div>
-      </div>
-      <div class="categories-desktop">
-        <div class="text-box light">
-          <h4 class="h4">Leather</h4>
-          Explore my collection of handcrafted leather goods, including passport
-          holders and a variety of wallet styles. Each piece can be personalized
-          with your initials, adding a unique touch to these timeless, durable
-          accessories.
-          <br />
-          <button type="button" data-filter="all" class="outline-button">
-            Discover My Leather Accessories
-          </button>
-        </div>
-        <div class="image-box leather"></div>
       </div>
 
-      <div class="about-container">
+      <div class="about-container container-box">
         <div class="about-box">
           <div class="flex-box">
             <h2 class="h2">
@@ -205,18 +192,13 @@
           </div>
         </div>
       </div>
-      <!-- LightWidget WIDGET -->
-      <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-      <iframe
-        src="//lightwidget.com/widgets/a77c50eabd3f573bb73acaa2a0e4dc66.html"
-        scrolling="no"
-        allowtransparency="true"
-        class="lightwidget-widget"
-        style="width: 100%; border: 0; overflow: hidden"
-      ></iframe>
 
       <div class="footer">
         <span class="text-muted">Copyright © 2025 Rennan Villar</span>
+        <span class="instagram_icon"
+          ><a href="https://www.instagram.com/villar_official/" target="_blank"
+            ><img src="css/assets/images/instagram_icon.jpg" /></a
+        ></span>
       </div>
     </div>
 
@@ -240,8 +222,6 @@
           new bootstrap.Popover(popover);
         });
     </script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

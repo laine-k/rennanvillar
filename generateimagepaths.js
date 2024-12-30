@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Specify the directory where your images are stored
-const imagesDir = path.join(__dirname, "css/assets/images/pipes/stands"); // Modify path as needed
+const imagesDir = path.join(__dirname, "css/assets/images/jewelry/rings"); // Modify path as needed
 
 // Function to generate HTML for each image in the folder
 function generateHTML() {
@@ -23,8 +23,8 @@ function generateHTML() {
 
     // Loop through each image file and generate HTML
     imageFiles.forEach((file) => {
-      const imagePath = path.join("css/assets/images/pipes/stands", file); // Relative path for the img src
-      const className = "stand"; // You can change this dynamically based on the folder or file
+      const imagePath = path.join("css/assets/images/jewelry/rings", file); // Relative path for the img src
+      const className = "rings"; // You can change this dynamically based on the folder or file
 
       // Generate the HTML for the current image
       htmlContent += `
