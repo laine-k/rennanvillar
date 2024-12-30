@@ -8,6 +8,7 @@ var msnry = new Masonry(elem, {
   percentPosition: true,
   columnWidth: ".grid-sizer",
   gutter: 20,
+  fitRows: true,
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -44,4 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Show all items initially
   filterGallery("all");
+});
+
+imagesLoaded(".grid", function () {
+  // Masonry initialization code here
+  msnry.layout();
 });
