@@ -1,0 +1,230 @@
+/* ── SCSS-style variables compiled to CSS ── */
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-section: #222222;
+    --gold: #c9973a;
+    --gold-light: #e8b86d;
+    --gold-dim: #7a5a1e;
+    --text-primary: #f0ece4;
+    --text-muted: #8a8278;
+    --text-body: #b8b0a4;
+    --border-subtle: rgba(201, 151, 58, 0.2);
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-body: "Barlow", sans-serif;
+}
+.category-container {
+    // mobile only
+    display: flex;
+    width: 100%;
+    gap: 1em;
+    margin-top: 4em;
+    flex-wrap: wrap;
+    .category-box {
+        flex: 1 1 calc(100% - 1em);
+        display: flex;
+        text-decoration: none;
+        align-items: end;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300px;
+        background-position: center;
+        padding-bottom: 2em;
+        box-sizing: border-box;
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+    .category-box.knives {
+        background-image: url("assets/images/knives/survival/handcrafted-leuku-knife.jpg");
+    }
+    .category-box.pipes {
+        background-image: url("assets/images/pipes/handcrafted-briar-pipe-temper.jpg");
+    }
+    .category-box.jewelry {
+        background-image: url("assets/images/jewelry/bracelets/handcrafted_titanium_bracelet.jpg");
+    }
+    .category-box.leather {
+        background-image: url("assets/images/leather/custom-leather-passport-holder.jpg");
+    }
+    .category-box.cigar_stand {
+        background-image: url("assets/images/cigar_stand.jpg");
+    }
+}
+.categories-desktop {
+    display: none;
+    font-size: 20px;
+    @media (min-width: 768px) {
+        display: flex;
+    }
+    .image-box {
+        width: 40%;
+        height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .image-box.knives {
+        background-image: url("assets/images/knives/survival/handcrafted-leuku-knife.jpg");
+    }
+    .image-box.pipes {
+        background-image: url("assets/images/pipes/handcrafted-briar-pipe-temper.jpg");
+    }
+    .image-box.leather {
+        background-image: url("assets/images/leather/custom-leather-passport-holder.jpg");
+    }
+    .image-box.jewellery {
+        background-image: url("assets/images/jewelry/bracelets/handcrafted_titanium_bracelet.jpg");
+    }
+    .image-box.cigar_stand {
+        background-image: url("assets/images/cigar_stand.jpg");
+    }
+    .text-box {
+        background-color: #1e1e1e;
+        width: 60%;
+        height: 600px;
+        padding: 5em 8em;
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .text-box.light {
+        background-color: rgb(229, 229, 229);
+        color: #1e1e1e;
+        .h2 {
+            color: #1e1e1e;
+        }
+    }
+    .outline-button {
+        margin-top: 2em;
+        text-transform: uppercase;
+        font-family: "Cinzel", serif;
+        font-weight: 500;
+        padding: 7px 15px;
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.19),
+            0 6px 6px rgba(0, 0, 0, 0.23);
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s ease;
+        border-radius: 7px;
+    }
+    .outline-button:hover {
+        box-shadow:
+            0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+        background-color: rgb(229, 229, 229);
+    }
+    .outline-button.dark {
+        background-color: #1e1e1e;
+        color: white;
+    }
+    .outline-button.dark:hover {
+        background-color: #000000;
+        color: white;
+    }
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.badge::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.7;
+}
+/////cigar buttons
+///
+///
+/* ── Buttons ── */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-wa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.06);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.btn-wa:hover::after {
+    opacity: 1;
+}
+.btn-wa:active {
+    transform: scale(0.98);
+}
+
+.btn-intl {
+    background: var(--gold);
+    color: #1a1209;
+}
+
+.btn-intl:hover {
+    background: var(--gold-light);
+}
+
+.btn-br {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+}
+
+.btn-br:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+.btn-flag {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.wa-svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.btn-intl .wa-svg {
+    fill: #1a1209;
+}
+.btn-br .wa-svg {
+    fill: var(--gold);
+}

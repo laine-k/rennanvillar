@@ -1,53 +1,42 @@
-//
-// Place any custom JS here
-//
+// ── Masonry grid (portfolio pages only) ──────────────────
 var elem = document.querySelector(".grid");
-var msnry = new Masonry(elem, {
-  // options
-  itemSelector: ".grid-item",
-  percentPosition: true,
-  columnWidth: ".grid-sizer",
-  gutter: 20,
-  fitRows: true,
-});
 
+if (elem) {
+  var msnry = new Masonry(elem, {
+    itemSelector:    ".grid-item",
+    percentPosition: true,
+    columnWidth:     ".grid-sizer",
+    gutter:          20,
+  });
+
+  imagesLoaded(".grid", function () {
+    msnry.layout();
+  });
+}
+
+// ── Gallery filter (portfolio pages only) ────────────────
 document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll(".filter-buttons button");
-  const galleryItems = document.querySelectorAll(".grid-item");
+  const galleryItems  = document.querySelectorAll(".grid-item");
 
-  // Function to filter gallery items
+  if (!filterButtons.length) return;
+
   function filterGallery(filter) {
-    galleryItems.forEach((item) => {
-      // Show all items if filter is 'all', else only show items with matching class
-      if (filter === "all" || item.classList.contains(filter)) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
+    galleryItems.forEach(function (item) {
+      item.style.display =
+        filter === "all" || item.classList.contains(filter) ? "block" : "none";
     });
-    msnry.layout();
+    if (elem && msnry) msnry.layout();
   }
 
-  // Add click event listeners to each filter button
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // Update active button styling
-      document
-        .querySelector(".filter-buttons .active")
-        .classList.remove("active");
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var current = document.querySelector(".filter-buttons .active");
+      if (current) current.classList.remove("active");
       button.classList.add("active");
-
-      // Filter items based on the selected button's data-filter attribute
-      const filter = button.getAttribute("data-filter");
-      filterGallery(filter);
+      filterGallery(button.getAttribute("data-filter"));
     });
   });
 
-  // Show all items initially
   filterGallery("all");
-});
-
-imagesLoaded(".grid", function () {
-  // Masonry initialization code here
-  msnry.layout();
 });

@@ -51,16 +51,12 @@
 
   // ── Image panel ────────────────────────────────────────
   .image-box {
-    width: 45%;
-    height: 520px;
+    width: 40%;
+    height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0;
-
-    @media (min-width: $bp-xl) {
-      height: 580px;
-    }
 
     &.knives      { background-image: url('assets/images/knives/survival/handcrafted-leuku-knife.jpg'); }
     &.pipes       { background-image: url('assets/images/pipes/handcrafted-briar-pipe-temper.jpg'); }
@@ -72,19 +68,18 @@
   // ── Text panel ─────────────────────────────────────────
   .text-box {
     background-color: $bg-section;
-    width: 55%;
-    height: 520px;
-    padding: 3rem 4rem;
+    width: 60%;
+    height: 600px;
+    padding: $section-padding-v $section-padding-h;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     position: relative;
 
     @media (min-width: $bp-xl) {
-      padding: 3.5rem 5rem;
-      height: 580px;
+      padding: $section-padding-v $section-padding-h-lg;
     }
 
     // Subtle gold left-edge accent
@@ -92,21 +87,22 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 25%;
-      bottom: 25%;
+      top: 20%;
+      bottom: 20%;
       width: 1px;
       background: linear-gradient(
         to bottom,
         transparent,
-        rgba($gold, 0.35),
+        rgba($gold, 0.4),
         transparent
       );
     }
 
     .h2 {
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
     }
 
+    // Bare text nodes (the description copy) — target via font styling on the box itself
     font-family: $font-body;
     font-size:   15px;
     font-weight: 300;

@@ -1,0 +1,274 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Include functions first
+@import "bootstrap/scss/functions";
+
+// Customize some defaults
+$body-color: #e7e7e7;
+
+$border-radius: 0.4rem;
+$success: #7952b3;
+
+// Required
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+// @import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+//
+// Custom styles
+//
+
+@import "icon-list";
+@import "custom-navbar";
+@import "about-container";
+@import "category-container";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+
+body {
+  background-color: black; /* Base dark forest green */
+  color: $body-color;
+  font-family: "Lora", serif;
+  /* @media (min-width: 768px) {
+    background:
+      linear-gradient(rgba(0, 51, 25, 0.3), rgba(0, 102, 51, 0.3)),
+      radial-gradient(circle at 40% 60%, rgba(34, 139, 34, 0.3), transparent),
+      url("assets/forest2.jpg") no-repeat center center fixed; 
+    background-size: cover; 
+    background-blend-mode: overlay, multiply; 
+    background-color: #0b3d322f; 
+  }  */
+  p {
+    font-size: 20px;
+  }
+}
+.body-container {
+  background-color: rgb(0, 0, 0);
+  box-shadow:
+    0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.container-box {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  @media (min-width: 768px) {
+    max-width: 720px;
+    padding: 0;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
+.logo-box {
+  justify-content: center;
+  padding: 2em;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+.top-logo {
+  width: 150px;
+}
+.navbarLogo {
+  width: 50px;
+}
+
+.header-box {
+  background-image: url("assets/header-mobile.jpg");
+  background-repeat: no-repeat;
+  height: 400px;
+  background-position: center;
+  //mobile
+  background-size: cover;
+  background-color: black;
+  padding-top: 2em;
+  @media (min-width: 768px) {
+    background-position: left;
+    background-image: url("assets/header.jpg");
+    padding-left: 8em;
+    padding-top: 0;
+  }
+}
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: "Lora", serif;
+  color: $body-color;
+  font-weight: 500;
+}
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  @media (max-width: 768px) {
+    justify-content: left;
+    align-items: center;
+  }
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  // position: sticky;
+  //top: 0; /* This will make the element stick at the top */
+  background-color: black;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.outline-button {
+  border: 2px solid black;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(26, 26, 26);
+  font-size: 14px;
+  margin-right: 7px;
+
+  @media (min-width: 768px) {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+}
+.outline-button:hover,
+.outline-button.active {
+  background-color: rgb(76, 76, 76);
+}
+.filter-button {
+  text-transform: uppercase;
+  font-family: "Cabin", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+/* ---- grid ---- */
+/* clear fix */
+.grid {
+  margin-left: 20px;
+}
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: calc(50% - 20px);
+  @media (min-width: 768px) {
+    width: calc(33.333% - 20px);
+  }
+  @media (min-width: 992px) {
+    width: calc(25% - 20px);
+  }
+}
+
+.grid-item {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+.footer {
+  padding: 1em 5em;
+  text-align: center;
+  .instagram_icon {
+    margin-left: 0.5em;
+    padding-bottom: 3px;
+    height: 27px;
+  }
+}
+.link {
+  color: white;
+}
+.navbar {
+  background-color: black !important;
+}
+.navbar-toggler {
+  border: none;
+}

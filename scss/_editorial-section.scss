@@ -1,0 +1,166 @@
+// ============================================================
+// _editorial-section.scss
+// Full-bleed image + floating text on black. No grey panels.
+// ============================================================
+
+.editorial-section {
+  display:    none; // shown via d-md-flex Bootstrap class
+  align-items: stretch;
+  min-height:  540px;
+  margin-bottom: 80px;
+
+  @media (min-width: $bp-xl) {
+    min-height: 620px;
+    margin-bottom: 120px;
+  }
+
+  // ── Reversed layout (text left, image right) ──────────
+  &.es--reverse {
+    flex-direction: row-reverse;
+  }
+
+  // ── Image ─────────────────────────────────────────────
+  .es-image {
+    width:               62%;
+    flex-shrink:         0;
+    background-size:     cover;
+    background-position: center;
+    background-repeat:   no-repeat;
+    transition:          transform 0.8s ease;
+
+    &.cigar_stand { background-image: url('assets/images/cigar_stand.jpg'); }
+    &.knives      { background-image: url('assets/images/knives/survival/handcrafted-leuku-knife.jpg'); }
+    &.pipes       { background-image: url('assets/images/pipes/handcrafted-briar-pipe-temper.jpg'); }
+    &.jewellery   { background-image: url('assets/images/jewelry/bracelets/handcrafted_titanium_bracelet.jpg'); }
+  }
+
+  &:hover .es-image {
+    transform: scale(1.015);
+  }
+
+  overflow: hidden;
+
+  // ── Text column ───────────────────────────────────────
+  .es-text {
+    width:           38%;
+    background:      $black;
+    padding:         3.5rem 3rem 3.5rem 3.5rem;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    gap:             1rem;
+    position:        relative;
+
+    @media (min-width: $bp-xl) {
+      padding: 4rem 3.5rem 4rem 4.5rem;
+    }
+
+    .es--reverse & {
+      padding: 3.5rem 3.5rem 3.5rem 3rem;
+
+      @media (min-width: $bp-xl) {
+        padding: 4rem 4.5rem 4rem 3.5rem;
+      }
+    }
+
+    &.es-text--light {
+      background: #f0ece4;
+    }
+  }
+
+  .es-number {
+    font-family:    $font-body;
+    font-size:      10px;
+    font-weight:    400;
+    letter-spacing: 0.25em;
+    color:          rgba($text-primary, 0.2);
+    display:        block;
+    margin-bottom:  0.25rem;
+
+    &.es-number--dark {
+      color: rgba($text-dark, 0.2);
+    }
+  }
+
+  .es-heading {
+    font-family:  $font-display;
+    font-size:    clamp(36px, 4vw, 58px);
+    font-weight:  400;
+    line-height:  1.05;
+    color:        $text-primary;
+    letter-spacing: -0.01em;
+    margin:       0;
+
+    em {
+      font-style:  italic;
+      font-weight: 400;
+    }
+
+    &.es-heading--dark {
+      color: #1a1209;
+    }
+  }
+
+  p {
+    font-family: $font-body;
+    font-size:   14px;
+    font-weight: 300;
+    line-height: 1.85;
+    color:       $text-body;
+    margin:      0;
+    max-width:   30ch;
+  }
+
+  .es-body--dark {
+    color: rgba(#1a1209, 0.6);
+  }
+
+  i {
+    font-family:    $font-body;
+    font-style:     normal;
+    font-size:      13px;
+    font-weight:    300;
+    color:          $text-body;
+    display:        block;
+    margin-top:     0.25rem;
+  }
+
+  .es-link {
+    display:        inline-block;
+    font-family:    $font-body;
+    font-size:      11px;
+    font-weight:    500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color:          $gold;
+    text-decoration: none;
+    margin-top:     0.5rem;
+    transition:     color $transition-fast;
+
+    &:hover { color: $gold-light; }
+
+    &.es-link--dark {
+      color: #8a6020;
+      &:hover { color: #5a3e10; }
+    }
+  }
+
+  .badge {
+    margin-bottom: 0;
+  }
+
+  .btn-group {
+    margin-top: 0.5rem;
+    gap:        8px;
+  }
+}
+
+.editorial-section:first-of-type {
+  @media (min-width: $bp-md) {
+    margin-top: 60px;
+  }
+}
+
+.editorial-section + .editorial-section {
+  margin-top: 0;
+}

@@ -1,0 +1,195 @@
+// ============================================================
+// _cigar-drop.scss
+// Hero: text left + big image right. 2 images + video below.
+// ============================================================
+
+// ── Global link utility — usable anywhere on the site ────
+.es-link {
+  display:        inline-block;
+  font-family:    $font-body;
+  font-size:      11px;
+  font-weight:    500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color:          $gold !important;
+  text-decoration: none !important;
+  transition:     color $transition-fast;
+
+  &:hover { color: $gold-light !important; }
+
+  &.es-link--dark {
+    color: #8a6020 !important;
+    &:hover { color: #5a3e10 !important; }
+  }
+}
+
+.cigar-drop {
+  background: $black;
+  padding: 3rem 1.5rem;
+
+  @media (min-width: $bp-md) {
+    padding: 5rem 0;
+  }
+
+  // ── Row 1: text left | big image right ───────────────
+  &__hero {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $bp-md) {
+      display:               grid;
+      grid-template-columns: 40% 60%;
+      grid-template-rows:    1fr;
+      min-height:            580px;
+    }
+
+    @media (min-width: $bp-xl) {
+      min-height: 660px;
+    }
+  }
+
+  &__text {
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    gap:             1.25rem;
+    padding:         2rem 1.5rem;
+
+    @media (min-width: $bp-md) {
+      padding: 4rem 4rem 4rem 5rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      padding: 5rem 5rem 5rem 8rem;
+    }
+
+    .badge { margin-bottom: 0; }
+
+    i {
+      font-family: $font-body;
+      font-style:  normal;
+      font-size:   13px;
+      font-weight: 300;
+      color:       $text-body;
+    }
+
+    .btn-group {
+      flex-direction: column;
+      gap:            10px;
+      margin-top:     0;
+
+      .btn-wa { justify-content: center; }
+    }
+  }
+
+  &__title {
+    font-family:    $font-display;
+    font-size:      clamp(32px, 4vw, 58px);
+    font-weight:    400;
+    line-height:    1.05;
+    color:          $text-primary;
+    letter-spacing: -0.01em;
+    margin:         0;
+
+    em { font-style: italic; font-weight: 400; }
+  }
+
+  &__sub {
+    font-family: $font-body;
+    font-size:   15px;
+    font-weight: 300;
+    line-height: 1.85;
+    color:       $text-body;
+    margin:      0;
+  }
+
+  // Grid child — explicit width from grid, explicit height from grid row
+  &__main-image {
+    background-size:     cover;
+    background-position: center;
+    background-repeat:   no-repeat;
+    background-color:    #1a1a1a;
+    height:              300px; // mobile fallback
+
+    @media (min-width: $bp-md) {
+      height: 100%; // fills the grid row height
+      width:  100%; // fills the 60% grid column
+    }
+  }
+
+  // ── Row 2: 2 product images + video ──────────────────
+  &__bottom {
+    display:               grid;
+    gap:                   3px;
+    margin-top:            3px;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: 1fr 1fr 2fr;
+      height:                360px;
+    }
+
+    @media (min-width: $bp-xl) {
+      height: 420px;
+    }
+  }
+
+  &__img {
+    background-size:     cover;
+    background-position: center;
+    background-repeat:   no-repeat;
+    background-color:    #1a1a1a;
+    height:              220px;
+    overflow:            hidden;
+    transition:          transform 0.6s ease;
+
+    &:hover { transform: scale(1.02); }
+
+    @media (min-width: $bp-md) {
+      height: auto;
+    }
+  }
+
+  &__video {
+    background: #0a0a0a;
+    height:     220px;
+
+    @media (min-width: $bp-md) {
+      height: auto;
+    }
+  }
+
+  &__video-wrap {
+    position: relative;
+    width:    100%;
+    height:   100%;
+  }
+
+  &__yt-link {
+    display:  block;
+    position: relative;
+    width:    100%;
+    height:   100%;
+    overflow: hidden;
+
+    img { transition: transform 0.4s ease; }
+    &:hover img { transform: scale(1.03); }
+  }
+
+  &__yt-play {
+    position:   absolute;
+    inset:      0;
+    display:    flex;
+    align-items: center;
+    justify-content: center;
+    font-size:  48px;
+    color:      rgba(255,255,255,0.9);
+    background: rgba(0,0,0,0.25);
+    transition: background 0.2s;
+    pointer-events: none;
+
+    .cigar-drop__yt-link:hover & {
+      background: rgba(0,0,0,0.4);
+    }
+  }
+}

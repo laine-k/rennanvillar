@@ -1,21 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Rennan Villar</title>
+    <title>Rennan Villar — Sobre / About</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -57,24 +53,49 @@
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              >
-                PORTFOLIO
+                data-en="PORTFOLIO"
+                data-pt="PORTFÓLIO"
+                >PORTFOLIO
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="knives.html">Knives</a></li>
                 <li>
-                  <a class="dropdown-item" href="pipes.html"
+                  <a
+                    class="dropdown-item"
+                    href="knives.html"
+                    data-en="Knives"
+                    data-pt="Facas"
+                    >Knives</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="pipes.html"
+                    data-en="Pipes and cigar accessories"
+                    data-pt="Cachimbos e acessórios"
                     >Pipes and cigar accessories</a
                   >
                 </li>
 
                 <li>
-                  <a class="dropdown-item" href="jewelry.html">Jewellery</a>
+                  <a
+                    class="dropdown-item"
+                    href="jewelry.html"
+                    data-en="Jewellery"
+                    data-pt="Joias"
+                    >Jewellery</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">ABOUT</a>
+              <a
+                class="nav-link"
+                href="about.html"
+                data-en="ABOUT"
+                data-pt="SOBRE"
+                >ABOUT</a
+              >
             </li>
           </ul>
         </div>
@@ -90,23 +111,40 @@
     <div class="body-container">
       <nav class="custom-navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" data-en="Home" data-pt="Home">Home</a></li>
           <li>
-            <a href="#">Portfolio</a>
+            <a href="#" data-en="Portfolio" data-pt="Portfólio">Portfolio</a>
             <ul class="custom-dropdown-menu">
               <li><a href="knives.html">Knives</a></li>
-              <li><a href="pipes.html">Pipes and cigar accessories</a></li>
-              <li><a href="jewelry.html">Jewellery</a></li>
+              <li>
+                <a
+                  href="pipes.html"
+                  data-en="Pipes and cigar accessories"
+                  data-pt="Cachimbos e acessórios"
+                  >Pipes and cigar accessories</a
+                >
+              </li>
+              <li>
+                <a href="jewelry.html" data-en="Jewellery" data-pt="Joias"
+                  >Jewellery</a
+                >
+              </li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="about.html" data-en="About" data-pt="Sobre">About</a>
+          </li>
         </ul>
       </nav>
 
       <div class="about-container container-box">
         <div class="about-box">
           <div class="flex-box">
-            <p class="text-muted">
+            <p
+              class="text-muted"
+              data-en="Welcome! I'm Rennan Villar, and I'm excited to share my handcrafted creations with you. For over 15 years, I've been devoted to crafting unique jewelry, custom knives, pipes, and leather accessories.<br/><br/>My journey began in Brazil, where I first delved into the art of craftsmanship. Since then, I've had the chance to work on international projects, collaborating with other artists and continuously refining my skills. Currently, I live and work in Latvia.<br/><br/>Each piece you find here is crafted with care and dedication. Whether it's a piece of jewelry, a well-made knife, a distinctive pipe, or a finely crafted leather accessory, I stand behind my work with a lifelong warranty. My goal is to ensure that every item is not just a product, but a lasting piece of art.<br/><br/>In addition to the collection, I offer custom orders that can be personalized in a variety of ways. If you have a specific vision or need something unique, don't hesitate to reach out.<br/><br/>Feel free to explore my collection and portfolio. To learn more about my story and journey, visit my full bio at <a class=&quot;link&quot; href=&quot;https://www.homofaber.com/en/discover/rennan-villar-5xzc2s&quot; target=&quot;_blank&quot;>homofaber.com</a>."
+              data-pt='Olá! Sou Rennan Villar, e é com grande prazer que compartilho minhas criações artesanais com você. Há mais de 15 anos dedico-me à criação de joias exclusivas, facas personalizadas, cachimbos e acessórios em couro.<br/><br/>Minha jornada começou no Brasil, onde dei os primeiros passos na arte do artesanato. Desde então, tive a oportunidade de trabalhar em projetos internacionais, colaborar com outros artistas e aprimorar continuamente minhas habilidades. Atualmente vivo e trabalho na Letônia.<br/><br/>Cada peça que você encontra aqui é feita com cuidado e dedicação. Seja uma joia, uma faca bem elaborada, um cachimbo distinto ou um acessório em couro refinado — garanto meu trabalho com garantia vitalícia. Meu objetivo é que cada item seja não apenas um produto, mas uma obra de arte duradoura.<br/><br/>Além da coleção, ofereço encomendas personalizadas das mais variadas formas. Se você tem uma visão específica ou precisa de algo único, não hesite em entrar em contato.<br/><br/>Explore à vontade minha coleção e portfólio. Para saber mais sobre minha história, visite minha biografia completa em <a class="link" href="https://www.homofaber.com/en/discover/rennan-villar-5xzc2s" target="_blank">homofaber.com</a>.'
+            >
               Welcome! I’m Rennan Villar, and I’m excited to share my
               handcrafted creations with you. For over 15 years, I’ve been
               devoted to crafting unique jewelry, custom knives, pipes, and
@@ -152,7 +190,12 @@
       </div>
 
       <div class="footer">
-        <span class="text-muted">Copyright © 2025 Rennan Villar</span>
+        <span
+          class="text-muted"
+          data-en="Copyright &copy; 2026 Rennan Villar"
+          data-pt="Copyright &copy; 2026 Rennan Villar"
+          >Copyright © 2026 Rennan Villar</span
+        >
         <span class="instagram_icon"
           ><a href="https://www.instagram.com/villar_official/" target="_blank"
             ><img src="css/assets/images/instagram_icon.jpg" /></a
@@ -160,27 +203,9 @@
       </div>
     </div>
 
-    <script
-      async
-      src="https://ga.jspm.io/npm:es-module-shims@1.5.5/dist/es-module-shims.js"
-    ></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.js",
-          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.min.js"
-        }
-      }
-    </script>
-    <script type="module">
-      import * as bootstrap from "bootstrap";
-      document
-        .querySelectorAll('[data-bs-toggle="popover"]')
-        .forEach((popover) => {
-          new bootstrap.Popover(popover);
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
   </body>
 </html>

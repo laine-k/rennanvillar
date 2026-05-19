@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>O Suporte de Charutos Carnikava — Rennan Villar</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <style>
+      /* ── Page-specific styles ── */
+
+      /* Hero */
+      .cs-hero {
+        position: relative;
+        height: 70vh;
+        min-height: 420px;
+        background-image: url('css/assets/images/cigar_stand.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+      }
+      .cs-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%);
+      }
+      .cs-hero__content {
+        position: relative;
+        z-index: 1;
+        padding: 3rem 2rem;
+        max-width: 800px;
+      }
+      @media (min-width: 768px) {
+        .cs-hero__content { padding: 4rem 6rem; }
+      }
+      .cs-hero__eyebrow {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #c9973a;
+        display: block;
+        margin-bottom: 1rem;
+      }
+      .cs-hero__title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(42px, 7vw, 88px);
+        font-weight: 400;
+        line-height: 1.0;
+        color: #f0ece4;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+      .cs-hero__title em {
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      /* Content sections */
+      .cs-content {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      /* Story section */
+      .cs-story {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 5rem 2rem;
+      }
+      @media (min-width: 768px) {
+        .cs-story {
+          grid-template-columns: 1fr 1fr;
+          gap: 6rem;
+          padding: 7rem 6rem;
+        }
+      }
+      .cs-story__label {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #c9973a;
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+      .cs-story__heading {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(28px, 3.5vw, 48px);
+        font-weight: 400;
+        line-height: 1.15;
+        color: #f0ece4;
+        letter-spacing: -0.01em;
+        margin: 0 0 1.5rem;
+      }
+      .cs-story__heading em { font-style: italic; }
+      .cs-story__body {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.9;
+        color: #908880;
+        margin: 0;
+      }
+      .cs-story__body + .cs-story__body {
+        margin-top: 1.25rem;
+      }
+
+      /* Divider */
+      .cs-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(201,151,58,0.25), transparent);
+        margin: 0 2rem;
+        width: calc(100% - 4rem);
+      }
+      @media (min-width: 768px) {
+        .cs-divider { margin: 0 6rem; width: calc(100% - 12rem); }
+      }
+
+      /* Process section */
+      .cs-process {
+        padding: 5rem 2rem;
+      }
+      @media (min-width: 768px) {
+        .cs-process { padding: 7rem 6rem; }
+      }
+      .cs-process__label {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #c9973a;
+        display: block;
+        margin-bottom: 3rem;
+      }
+      .cs-process__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+      @media (min-width: 768px) {
+        .cs-process__grid {
+          grid-template-columns: 2fr 1fr 1fr;
+          height: 500px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .cs-process__grid { height: 580px; }
+      }
+      .cs-process__img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #1a1a1a;
+        height: 260px;
+        overflow: hidden;
+        transition: transform 0.6s ease;
+      }
+      .cs-process__img:hover { transform: scale(1.02); }
+      @media (min-width: 768px) {
+        .cs-process__img { height: auto; }
+        .cs-process__img--main {
+          grid-row: 1 / 3;
+        }
+      }
+      .cs-process__caption-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2.5rem;
+      }
+      @media (min-width: 768px) {
+        .cs-process__caption-grid {
+          grid-template-columns: 2fr 1fr 1fr;
+          gap: 3rem;
+        }
+      }
+      .cs-process__caption {
+        font-family: 'DM Sans', sans-serif;
+      }
+      .cs-process__caption-num {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: rgba(201,151,58,0.4);
+        display: block;
+        margin-bottom: 0.4rem;
+      }
+      .cs-process__caption-text {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #5a5450;
+        margin: 0;
+      }
+
+      /* Video section */
+      .cs-video {
+        padding: 0 2rem 5rem;
+      }
+      @media (min-width: 768px) {
+        .cs-video { padding: 0 6rem 7rem; }
+      }
+      .cs-video__label {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #c9973a;
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+      .cs-video__wrap {
+        position: relative;
+        width: 100%;
+        padding-top: 0;
+        background: #0a0a0a;
+        overflow: hidden;
+      }
+      .cs-video__link {
+        display: block;
+        position: relative;
+        width: 100%;
+      }
+      .cs-video__link img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .cs-video__link:hover img { transform: scale(1.02); }
+      .cs-video__play {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 56px;
+        color: rgba(255,255,255,0.9);
+        background: rgba(0,0,0,0.2);
+        transition: background 0.2s;
+        pointer-events: none;
+      }
+      .cs-video__link:hover .cs-video__play {
+        background: rgba(0,0,0,0.4);
+      }
+
+      /* Buy section */
+      .cs-buy {
+        padding: 5rem 2rem 6rem;
+        border-top: 1px solid rgba(201,151,58,0.12);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      @media (min-width: 768px) {
+        .cs-buy {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5rem 6rem 7rem;
+        }
+      }
+      .cs-buy__left {
+        max-width: 480px;
+      }
+      .cs-buy__heading {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(28px, 3vw, 44px);
+        font-weight: 400;
+        line-height: 1.1;
+        color: #f0ece4;
+        letter-spacing: -0.01em;
+        margin: 0 0 1rem;
+      }
+      .cs-buy__heading em { font-style: italic; }
+      .cs-buy__sub {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: #5a5450;
+        margin: 0;
+        font-style: normal;
+      }
+      .cs-buy__right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+      @media (min-width: 768px) {
+        .cs-buy__right { min-width: 220px; }
+        .cs-buy__right .btn-wa { justify-content: center; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Mobile navbar -->
+    <nav class="d-block d-md-none navbar navbar-expand-lg bg-dark border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img loading="lazy" src="css/assets/logo-color-text.png" alt="Logo" class="navbarLogo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-pt="Home">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="knives.html" data-en="Knives" data-pt="Facas">Knives</a></li>
+                <li><a class="dropdown-item" href="pipes.html" data-en="Pipes and cigar accessories" data-pt="Cachimbos e acessórios para charutos">Pipes and cigar accessories</a></li>
+                <li><a class="dropdown-item" href="jewelry.html" data-en="Jewellery" data-pt="Joias">Jewellery</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Logo -->
+    <div class="logo-box">
+      <img src="css/assets/logo-color-text.png" class="top-logo d-none d-md-block" alt="Logo" />
+    </div>
+
+    <div class="body-container">
+
+      <!-- Desktop navbar -->
+      <nav class="custom-navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#" data-en="Portfolio" data-pt="Portfólio">Portfolio</a>
+            <ul class="custom-dropdown-menu">
+              <li><a href="knives.html" data-pt="Facas" data-en="Knives">Knives</a></li>
+              <li><a href="pipes.html"  data-en="Pipes and cigar accessories"
+                  data-pt="Cachimbos e acessórios para charutos">Pipes and cigar accessories</a></li>
+              <li><a href="jewelry.html" data-en="Jewellery" data-pt="Joias">Jewellery</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- ── Hero ── -->
+      <div class="cs-hero">
+        <div class="cs-hero__content">
+          <span class="cs-hero__eyebrow" data-en="Handcrafted &middot; Limited drop &middot; Carnikava, Latvia" data-pt="Feito à mão &middot; Edição limitada &middot; Carnikava, Letônia">Handcrafted &middot; Limited drop &middot; Carnikava, Latvia</span>
+          <h1 class="cs-hero__title" data-en="The Carnikava<br><em>Cigar Stand</em>" data-pt="O Suporte de Charutos<br><em>Carnikava</em>">The Carnikava<br><em>Cigar Stand</em></h1>
+        </div>
+      </div>
+
+      <div class="cs-content">
+
+        <!-- ── Story ── -->
+        <section class="cs-story">
+          <div>
+            <span class="cs-story__label" data-en="The history" data-pt="A história">The history</span>
+            <h2 class="cs-story__heading" data-en="A battlefield<br><em>since 1211</em>" data-pt="Um campo de batalha<br><em>desde 1211</em>">A battlefield<br><em>since 1211</em></h2>
+            <p class="cs-story__body" data-en="Carnikava, first recorded in 1211, was a rallying point for Livonian troops during the Northern Crusades. This stretch of Latvian soil bore witness to some of the earliest expressions of military organisation in the Baltic — a place where men assembled before battle, where honour and survival were the same thing." data-pt="Carnikava, registrada pela primeira vez em 1211, era o ponto de reunião das tropas livonianas durante as Cruzadas do Norte. Este trecho de solo letão foi palco de algumas das primeiras expressões de organização militar no Báltico — um lugar onde homens se reuniam antes da batalha, onde honra e sobrevivência eram a mesma coisa.">Carnikava, first recorded in 1211, was a rallying point for Livonian troops during the Northern Crusades. This stretch of Latvian soil bore witness to some of the earliest expressions of military organisation in the Baltic — a place where men assembled before battle, where honour and survival were the same thing.</p>
+            <p class="cs-story__body" data-en="During World War II, Carnikava became a battleground once more. The Soviet Baltic Offensive of 1944 clashed with German forces across this same land. The shell casings recovered here are not replicas or decorations — they are genuine remnants of that conflict, pulled from the ground where they fell." data-pt="Durante a Segunda Guerra Mundial, Carnikava tornou-se novamente um campo de batalha. A Ofensiva Soviética do Báltico de 1944 confrontou as forças alemãs nessa mesma terra. As espoletas recuperadas aqui não são réplicas ou decorações — são autênticos vestígios daquele conflito, retirados do chão onde caíram.">
+            <p class="cs-story__body" data-en="During World War II, Carnikava became a battleground once more. The Soviet Baltic Offensive of 1944 clashed with German forces across this same land. The shell casings recovered here are not replicas or decorations — they are genuine remnants of that conflict, pulled from the ground where they fell." data-pt="Durante a Segunda Guerra Mundial, Carnikava tornou-se novamente um campo de batalha. A Ofensiva Soviética do Báltico de 1944 confrontou as forças alemãs nessa mesma terra. As espoletas recuperadas aqui não são réplicas nem decorações — são autênticos vestígios daquele conflito, retirados do chão onde caíram.">During World War II, Carnikava became a battleground once more. The Soviet Baltic Offensive of 1944 clashed with German forces across this same land. The shell casings recovered here are not replicas or decorations — they are genuine remnants of that conflict, pulled from the ground where they fell.</p>
+          </div>
+          <div>
+            <span class="cs-story__label" data-en="The object" data-pt="O objeto">The object</span>
+            <h2 class="cs-story__heading" data-en="War material,<br><em>reborn</em>" data-pt="Material de guerra,<br><em>renascido</em>">War material,<br><em>reborn</em></h2>
+            <p class="cs-story__body" data-en="Each cigar stand is shaped entirely by hand from these recovered casings. No two are alike — the patina, the weight, the slight variations in form are a direct record of each casing's history. Nothing is hidden or polished away." data-pt="Cada suporte de charutos é moldado inteiramente à mão a partir dessas espoletas recuperadas. Nenhum é igual ao outro — a pátina, o peso, as pequenas variações de forma são um registro direto da história de cada espoleta. Nada é escondido ou polido.">Each cigar stand is shaped entirely by hand from these recovered casings. No two are alike — the patina, the weight, the slight variations in form are a direct record of each casing's history. Nothing is hidden or polished away.</p>
+            <p class="cs-story__body" data-en="By repurposing relics of conflict into an object of leisure and reflection, the stand becomes something more than functional. It is a bridge across centuries — from the Livonian Crusaders to the soldiers of 1944, to the moment you set your cigar down and pause." data-pt="Ao transformar relíquias de conflito em um objeto de lazer e reflexão, o suporte torna-se algo mais do que funcional. É uma ponte através dos séculos — dos Cruzados Livonianos aos soldados de 1944, até o momento em que você pousa seu charuto e faz uma pausa.">By repurposing relics of conflict into an object of leisure and reflection, the stand becomes something more than functional. It is a bridge across centuries — from the Livonian Crusaders to the soldiers of 1944, to the moment you set your cigar down and pause.</p>
+          </div>
+        </section>
+
+        <div class="cs-divider"></div>
+
+        <!-- ── Process ── -->
+        <section class="cs-process">
+          <span class="cs-process__label" data-en="The making" data-pt="O processo">The making</span>
+
+          <div class="cs-process__grid">
+            <!-- Replace these paths with your actual process photos -->
+            <div class="cs-process__img cs-process__img--main"
+              style="background-image:url('css/assets/images/cigar_stand4.jpeg')"></div>
+            <div class="cs-process__img"
+              style="background-image:url('css/assets/images/cigar_stand7.jpeg')"></div>
+            <div class="cs-process__img"
+              style="background-image:url('css/assets/images/cigar_stand6.jpeg')"></div>
+          </div>
+
+          <div class="cs-process__caption-grid">
+            <div class="cs-process__caption">
+              <span class="cs-process__caption-num">01</span>
+              <p class="cs-process__caption-text" data-en="Shell casings recovered from the fields of Carnikava, each selected by hand for structural integrity and character." data-pt="Espoletas recuperadas dos campos de Carnikava, cada uma selecionada à mão pela sua integridade estrutural e caráter.">Shell casings recovered from the fields of Carnikava, each selected by hand for structural integrity and character.</p>
+            </div>
+            <div class="cs-process__caption">
+              <span class="cs-process__caption-num">02</span>
+              <p class="cs-process__caption-text" data-en="Cut, shaped and fitted entirely without machinery. Every mark left by the process is intentional." data-pt="Cortadas, moldadas e ajustadas inteiramente sem maquinário. Cada marca deixada pelo processo é intencional.">Cut, shaped and fitted entirely without machinery. Every mark left by the process is intentional.</p>
+            </div>
+            <div class="cs-process__caption">
+              <span class="cs-process__caption-num">03</span>
+              <p class="cs-process__caption-text" data-en="The finished stand — heavy, balanced, and carrying eight centuries of history in its weight." data-pt="O suporte finalizado — pesado, equilibrado e carregando oito séculos de história em seu peso.">The finished stand — heavy, balanced, and carrying eight centuries of history in its weight.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="cs-divider"></div>
+
+        <!-- ── Video ── -->
+        <section class="cs-video">
+          <span class="cs-video__label" data-en="See it in your hands" data-pt="Veja nas suas mãos">See it in your hands</span>
+          <div class="cs-video__wrap">
+            <a class="cs-video__link" href="https://www.youtube.com/watch?v=Xd9r5UgBqkw"
+              target="_blank" rel="noopener">
+              <img
+                src="https://img.youtube.com/vi/Xd9r5UgBqkw/maxresdefault.jpg"
+                alt="The Carnikava Cigar Stand — watch on YouTube"
+              />
+              <div class="cs-video__play">&#9654;</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- ── Buy ── -->
+        <section class="cs-buy">
+          <div class="cs-buy__left">
+            <h2 class="cs-buy__heading" data-en="Own one.<br><em>Each is the last of its kind.</em>" data-pt="Adquira o seu.<br><em>Cada um é único e irrepetível.</em>">Own one.<br><em>Each is the last of its kind.</em></h2>
+            <i class="cs-buy__sub" data-en="Order directly via WhatsApp — worldwide or Brazil" data-pt="Peça diretamente pelo WhatsApp — mundo todo ou Brasil">Order directly via WhatsApp — worldwide or Brazil</i>
+          </div>
+          <div class="cs-buy__right">
+            <a class="btn-wa btn-intl"
+              href="https://wa.me/37129396172"
+              target="_blank" rel="noopener">
+              <svg class="wa-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span class="btn-flag">🌍</span data-en="&#9654; Buy Worldwide" data-pt="&#9654; Comprar — Internacional"> Buy Worldwide
+            </a>
+            <a class="btn-wa btn-br"
+              href="https://wa.me/5511966421111"
+              target="_blank" rel="noopener">
+              <svg class="wa-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span class="btn-flag">🇧🇷</span> Comprar Brasil
+            </a>
+          </div>
+        </section>
+
+      </div><!-- /cs-content -->
+
+      <div class="footer">
+        <span class="text-muted">Copyright &copy; 2026 Rennan Villar</span>
+        <span class="instagram_icon">
+          <a href="https://www.instagram.com/villar_official/" target="_blank">
+            <img src="css/assets/images/instagram_icon.jpg" />
+          </a>
+        </span>
+      </div>
+
+    </div><!-- /body-container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+  </body>
+</html>

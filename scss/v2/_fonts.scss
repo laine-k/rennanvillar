@@ -1,0 +1,67 @@
+// ============================================================
+// _fonts.scss
+// Global typography. Import after _variables.scss.
+// ============================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+// ── Base ───────────────────────────────────────────────────
+body {
+  font-family:  $font-body;
+  font-weight:  300;
+  font-size:    16px;
+  line-height:  1.75;
+  color:        $text-primary;
+  background-color: $black;
+  letter-spacing: 0.01em;
+
+  p {
+    font-size:    15px;
+    line-height:  1.85;
+    color:        $text-body;
+    margin-bottom: 0;
+  }
+}
+
+// ── Headings ───────────────────────────────────────────────
+.h1, .h2, .h3, .h4,
+h1, h2, h3, h4 {
+  font-family:    $font-display;
+  font-weight:    500;
+  color:          $text-primary;
+  line-height:    1.15;
+  letter-spacing: 0.01em;
+  margin-bottom:  0;
+}
+
+.h1, h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 600; }
+.h2, h2 { font-size: clamp(26px, 3vw, 40px); }
+.h3, h3 { font-size: clamp(20px, 2.5vw, 28px); }
+.h4, h4 {
+  font-family:    $font-body;
+  font-size:      14px;
+  font-weight:    300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          $text-body;
+}
+
+// ── Utility ────────────────────────────────────────────────
+.text-muted {
+  color: $text-muted !important;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+a.link {
+  color: $gold;
+  text-decoration: none;
+  transition: color $transition-fast;
+  &:hover { color: $gold-light; }
+}
+
+// ── Header hero ────────────────────────────────────────────
+.header-box {
+  .h1 { letter-spacing: -0.01em; }
+  .h4 { margin-top: 1rem; }
+}

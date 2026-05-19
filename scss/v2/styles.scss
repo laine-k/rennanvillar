@@ -14,9 +14,7 @@
 
 // 4. Components
 @import 'custom-navbar';
-@import 'cigar-drop';
 @import 'category-container';
-@import 'editorial-section';
 @import 'about-container';
 @import 'icon-list';
 
@@ -28,11 +26,11 @@ body {
 
 .body-container {
   background-color: $black;
+  box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
   z-index: 2;
-  margin-left:  auto;
+  margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 1400px;
 }
 
 .container-box {
@@ -60,7 +58,7 @@ body {
 .header-box {
   background-image:    url('assets/header-mobile.jpg');
   background-repeat:   no-repeat;
-  height:              340px;
+  height:              400px;
   background-position: center;
   background-size:     cover;
   background-color:    $black;
@@ -69,13 +67,8 @@ body {
   @media (min-width: $bp-md) {
     background-position: left;
     background-image:    url('assets/header.jpg');
-    height:              460px;
-    padding-left: 6em;
-    padding-top:  0;
-  }
-
-  @media (min-width: $bp-xl) {
     padding-left: 8em;
+    padding-top:  0;
   }
 }
 
@@ -157,60 +150,24 @@ body {
   }
 }
 
-// ── Section spacing ───────────────────────────────────────
-// Handled in _editorial-section.scss
-
 // ── Footer ────────────────────────────────────────────────
 .footer {
-  padding:    2.5rem 3rem;
+  padding:    2rem 5em;
   text-align: center;
   font-family: $font-body;
-  font-size:   12px;
+  font-size:   11px;
   letter-spacing: 0.08em;
   color:       $text-muted;
-  border-top:  1px solid rgba($text-primary, 0.06);
 
   .instagram_icon {
     margin-left:    0.5em;
     padding-bottom: 3px;
-    height:         22px;
+    height:         27px;
     display:        inline-block;
     vertical-align: middle;
-    opacity: 0.5;
-    transition: opacity $transition-fast;
-
-    &:hover { opacity: 1; }
   }
 }
 
 // ── Bootstrap navbar overrides ────────────────────────────
 .navbar { background-color: $black !important; }
 .navbar-toggler { border: none; }
-
-// ── Language toggle ───────────────────────────────────────
-.lang-toggle {
-  display:     flex;
-  align-items: center;
-  gap:         4px;
-  cursor:      pointer;
-  margin-left: 16px;
-
-  [data-lang] {
-    font-family:    $font-body;
-    font-size:      10px;
-    font-weight:    400;
-    letter-spacing: 0.14em;
-    color:          $text-muted;
-    transition:     color $transition-fast;
-    padding:        2px 0;
-
-    &:hover         { color: $text-body; }
-    &.lang-active   { color: $gold; }
-  }
-
-  .lang-sep {
-    font-size: 10px;
-    color:     $text-muted;
-    opacity:   0.4;
-  }
-}

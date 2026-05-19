@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>Rennan Villar — Joias / Jewellery</title>
+    <title>Rennan Villar - handcrafted jewelry</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -41,12 +45,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="index.html"
-                data-en="HOME"
-                data-pt="Home"
+              <a class="nav-link active" aria-current="page" href="index.html"
                 >HOME</a
               >
             </li>
@@ -59,47 +58,27 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                data-en="PORTFOLIO" data-pt="PORTFÓLIO">PORTFOLIO
+                PORTFOLIO
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="knives.html">Knives</a></li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="knives.html"
-                    data-en="Knives"
-                    data-pt="Facas"
-                    >Knives</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="pipes.html"
-                    data-en="Pipes and cigar accessories"
-                    data-pt="Cachimbos e acessórios"
+                  <a class="dropdown-item" href="pipes.html"
                     >Pipes and cigar accessories</a
                   >
                 </li>
 
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="jewelry.html"
-                    data-en="Jewellery"
-                    data-pt="Joias"
-                    >Jewellery</a
-                  >
-                </li>
+                <a
+                  class="dropdown-item"
+                  href="jewelry.html"
+                  data-en="Jewellery"
+                  data-pt="Joias"
+                  >Jewellery</a
+                >
               </ul>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="about.html"
-                data-en="ABOUT"
-                data-pt="SOBRE"
-                >ABOUT</a
-              >
+              <a class="nav-link" href="about.html">ABOUT</a>
             </li>
           </ul>
         </div>
@@ -115,34 +94,17 @@
     <div class="body-container">
       <nav class="custom-navbar">
         <ul>
-          <li><a href="index.html" data-en="Home" data-pt="Home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li>
-            <a href="#" data-en="Portfolio" data-pt="Portfólio">Portfolio</a>
+            <a href="#">Portfolio</a>
             <ul class="custom-dropdown-menu">
-              <li>
-                <a href="knives.html" data-en="Knives" data-pt="Facas"
-                  >Knives</a
-                >
-              </li>
-              <li>
-                <a
-                  href="pipes.html"
-                  data-en="Pipes and cigar accessories"
-                  data-pt="Cachimbos e acessórios"
-                  >Pipes and cigar accessories</a
-                >
-              </li>
+              <li><a href="knives.html">Knives</a></li>
+              <li><a href="pipes.html">Pipes and cigar accessories</a></li>
 
-              <li>
-                <a href="jewelry.html" data-en="Jewellery" data-pt="Joias"
-                  >Jewellery</a
-                >
-              </li>
+              <li><a href="jewelry.html">Jewellery</a></li>
             </ul>
           </li>
-          <li>
-            <a href="about.html" data-en="About" data-pt="Sobre">About</a>
-          </li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
 
@@ -152,35 +114,35 @@
           data-filter="all"
           class="outline-button filter-button active"
         >
-          <span data-en="All" data-pt="Todos">All</span>
+          All
         </button>
         <button
           type="button"
           data-filter="bracelet"
           class="outline-button filter-button"
         >
-          <span data-en="Bracelets" data-pt="Pulseiras">Bracelets</span>
+          Bracelets
         </button>
         <button
           type="button"
           data-filter="rings"
           class="outline-button filter-button"
         >
-          <span data-en="Rings" data-pt="Anéis">Rings</span>
+          Rings
         </button>
         <button
           type="button"
           data-filter="earrings"
           class="outline-button filter-button"
         >
-          <span data-en="Earrings" data-pt="Brincos">Earrings</span>
+          Earrings
         </button>
         <button
           type="button"
           data-filter="pendant"
           class="outline-button filter-button"
         >
-          <span data-en="Pendants" data-pt="Pingentes">Pendants</span>
+          Pendants
         </button>
       </div>
 
@@ -417,12 +379,7 @@
       </div>
 
       <div class="footer">
-        <span
-          class="text-muted"
-          data-en="Copyright &copy; 2026 Rennan Villar"
-          data-pt="Copyright &copy; 2026 Rennan Villar"
-          >Copyright © 2026 Rennan Villar</span
-        >
+        <span class="text-muted">Copyright © 2026 Rennan Villar</span>
         <span class="instagram_icon"
           ><a href="https://www.instagram.com/villar_official/" target="_blank"
             ><img src="css/assets/images/instagram_icon.jpg" /></a
@@ -430,11 +387,29 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      async
+      src="https://ga.jspm.io/npm:es-module-shims@1.5.5/dist/es-module-shims.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.js",
+          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.min.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import * as bootstrap from "bootstrap";
+      document
+        .querySelectorAll('[data-bs-toggle="popover"]')
+        .forEach((popover) => {
+          new bootstrap.Popover(popover);
+        });
+    </script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
     <script src="js/main.js"></script>
-    <script src="js/lang.js"></script>
   </body>
 </html>
