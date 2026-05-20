@@ -33,11 +33,21 @@
       letter-spacing: 0.2em;
     }
 
-    &.knives   { background-image: url('assets/images/knives/survival/handcrafted-leuku-knife.jpg'); }
-    &.pipes    { background-image: url('assets/images/pipes/handcrafted-briar-pipe-temper.jpg'); }
-    &.jewelry  { background-image: url('assets/images/jewelry/bracelets/handcrafted_titanium_bracelet.jpg'); }
-    &.leather  { background-image: url('assets/images/leather/custom-leather-passport-holder.jpg'); }
-    &.cigar_stand { background-image: url('assets/images/cigar_stand.jpg'); }
+    &.knives {
+      background-image: url("assets/images/knives/survival/handcrafted-leuku-knife.jpg");
+    }
+    &.pipes {
+      background-image: url("assets/images/pipes/handcrafted-briar-pipe-temper.jpg");
+    }
+    &.jewelry {
+      background-image: url("assets/images/jewelry/bracelets/handcrafted_titanium_bracelet.jpg");
+    }
+    &.leather {
+      background-image: url("assets/images/leather/custom-leather-passport-holder.jpg");
+    }
+    &.cigar_stand {
+      background-image: url("assets/images/cigar_stand.jpg");
+    }
   }
 }
 
@@ -62,11 +72,21 @@
       height: 580px;
     }
 
-    &.knives      { background-image: url('assets/images/knives/survival/handcrafted-leuku-knife.jpg'); }
-    &.pipes       { background-image: url('assets/images/pipes/handcrafted-briar-pipe-temper.jpg'); }
-    &.leather     { background-image: url('assets/images/leather/custom-leather-passport-holder.jpg'); }
-    &.jewellery   { background-image: url('assets/images/jewelry/bracelets/handcrafted_titanium_bracelet.jpg'); }
-    &.cigar_stand { background-image: url('assets/images/cigar_stand.jpg'); }
+    &.knives {
+      background-image: url("assets/images/knives/survival/handcrafted-leuku-knife.jpg");
+    }
+    &.pipes {
+      background-image: url("assets/images/pipes/handcrafted-briar-pipe-temper.jpg");
+    }
+    &.leather {
+      background-image: url("assets/images/leather/custom-leather-passport-holder.jpg");
+    }
+    &.jewellery {
+      background-image: url("assets/images/jewelry/bracelets/handcrafted_titanium_bracelet.jpg");
+    }
+    &.cigar_stand {
+      background-image: url("assets/images/cigar_stand.jpg");
+    }
   }
 
   // ── Text panel ─────────────────────────────────────────
@@ -89,18 +109,13 @@
 
     // Subtle gold left-edge accent
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 25%;
       bottom: 25%;
       width: 1px;
-      background: linear-gradient(
-        to bottom,
-        transparent,
-        rgba($gold, 0.35),
-        transparent
-      );
+      background: linear-gradient(to bottom, transparent, rgba($gold, 0.35), transparent);
     }
 
     .h2 {
@@ -108,22 +123,27 @@
     }
 
     font-family: $font-body;
-    font-size:   15px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 1.85;
-    color:       $text-body;
+    color: $text-body;
 
     // ── Light variant (pipes section) ──────────────────
     &.light {
       background-color: $bg-light;
       color: $text-dark;
 
-      &::before { display: none; }
+      &::before {
+        display: none;
+      }
 
-      .h2 { color: $text-dark; font-weight: 600; }
+      .h2 {
+        color: $text-dark;
+        font-weight: 600;
+      }
 
       .outline-button {
-        color:        $text-dark;
+        color: $text-dark;
         border-color: rgba($text-dark, 0.25);
 
         &:hover {
@@ -138,25 +158,27 @@
   .outline-button {
     display: inline-block;
     margin-top: 0.5rem;
-    font-family:     $font-body;
-    font-size:       10px;
-    font-weight:     500;
-    letter-spacing:  0.16em;
-    text-transform:  uppercase;
-    padding:         10px 22px;
-    border-radius:   2px;
-    background:      transparent;
-    color:           $text-primary;
-    border:          1px solid rgba($text-primary, 0.2);
-    box-shadow:      none;
-    cursor:          pointer;
-    transition:      border-color $transition-fast, color $transition-fast;
+    font-family: $font-body;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 2px;
+    background: transparent;
+    color: $text-primary;
+    border: 1px solid rgba($text-primary, 0.2);
+    box-shadow: none;
+    cursor: pointer;
+    transition:
+      border-color $transition-fast,
+      color $transition-fast;
 
     &:hover {
       border-color: $text-primary;
-      color:        $text-primary;
-      background:   transparent;
-      box-shadow:   none;
+      color: $text-primary;
+      background: transparent;
+      box-shadow: none;
     }
   }
 }
@@ -170,56 +192,56 @@
   }
 
   &__image {
-    width:               100%;
-    height:              260px;
-    background-size:     cover;
+    width: 100%;
+    height: 260px;
+    background-size: cover;
     background-position: center;
-    background-repeat:   no-repeat;
+    background-repeat: no-repeat;
 
     &.cigar_stand {
-      background-image: url('assets/images/cigar_stand.jpg');
+      background-image: url("assets/images/cigar_stand.jpg");
     }
   }
 
   &__content {
     background-color: $bg-section;
-    padding:          2rem 1.5rem;
-    display:          flex;
-    flex-direction:   column;
-    gap:              0.75rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 
     .h2 {
-      font-size:   clamp(24px, 6vw, 32px);
+      font-size: clamp(24px, 6vw, 32px);
       line-height: 1.15;
     }
 
     p {
-      font-size:   14px;
+      font-size: 14px;
       line-height: 1.8;
-      color:       $text-body;
-      margin:      0;
+      color: $text-body;
+      margin: 0;
     }
 
     i {
-      font-family:    $font-body;
-      font-style:     normal;
-      font-size:      13px;
-      font-weight:    300;
+      font-family: $font-body;
+      font-style: normal;
+      font-size: 13px;
+      font-weight: 300;
       letter-spacing: 0.03em;
       text-transform: none;
-      color:          $text-body;
-      display:        block;
+      color: $text-body;
+      display: block;
     }
 
     .btn-group {
       flex-direction: column;
-      gap:            8px;
-      margin-top:     0.25rem;
+      gap: 8px;
+      margin-top: 0.25rem;
 
       .btn-wa {
         justify-content: center;
-        padding:         0.75rem 1rem;
-        font-size:       12px;
+        padding: 0.75rem 1rem;
+        font-size: 12px;
       }
     }
   }
@@ -230,19 +252,19 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family:    $font-body;
-  font-size:      10px;
-  font-weight:    400;
+  font-family: $font-body;
+  font-size: 10px;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color:          $gold;
-  margin-bottom:  0.5rem;
+  color: $gold;
+  margin-bottom: 0.5rem;
 
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
-    width:   18px;
-    height:  1px;
+    width: 18px;
+    height: 1px;
     background: $gold;
     opacity: 0.6;
   }
@@ -251,78 +273,97 @@
 // ── "Order via WhatsApp" label ───────────────────────────
 .categories-desktop .text-box i,
 .cigar-mobile__content i {
-  font-family:    $font-body;
-  font-style:     normal;
-  font-size:      13px;
-  font-weight:    300;
+  font-family: $font-body;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 300;
   letter-spacing: 0.03em;
   text-transform: none;
-  color:          $text-body;
-  display:        block;
-  margin-top:     0.25rem;
+  color: $text-body;
+  display: block;
+  margin-top: 0.25rem;
 }
 
 // ── WhatsApp buttons ─────────────────────────────────────
 .btn-group {
-  display:   flex;
-  gap:       10px;
+  display: flex;
+  gap: 10px;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
 .btn-wa {
-  display:        inline-flex;
-  align-items:    center;
-  gap:            8px;
-  padding:        0.65rem 1.2rem;
-  font-family:    $font-body;
-  font-size:      10px;
-  font-weight:    500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.65rem 1.2rem;
+  font-family: $font-body;
+  font-size: 10px;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
-  cursor:         pointer;
-  border:         none;
-  border-radius:  2px;
-  transition:     background $transition-fast, color $transition-fast, border-color $transition-fast;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  transition:
+    background $transition-fast,
+    color $transition-fast,
+    border-color $transition-fast;
 
-  &:active { transform: scale(0.98); }
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .btn-intl {
   background: $gold;
-  color:      #100d06;
+  color: #100d06;
 
-  .wa-svg { fill: #100d06; }
+  .wa-svg {
+    fill: #100d06;
+  }
 
   &:hover {
     background: $gold-light;
-    color:      #100d06;
+    color: #100d06;
   }
 }
 
 .btn-br {
-  background:   transparent;
-  color:        $gold;
-  border:       1px solid $gold-dim;
+  background: transparent;
+  color: $gold;
+  border: 1px solid $gold-dim;
 
-  .wa-svg { fill: $gold; }
+  .wa-svg {
+    fill: $gold;
+  }
 
   &:hover {
     border-color: $gold;
-    color:        $gold-light;
+    color: $gold-light;
 
-    .wa-svg { fill: $gold-light; }
+    .wa-svg {
+      fill: $gold-light;
+    }
   }
 }
 
 .btn-flag {
-  font-size:   15px;
+  font-size: 15px;
   line-height: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+.btn-flag img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+  border-radius: 50%; /* makes it a circle, since the SVG is round */
 }
 
 .wa-svg {
-  width:      14px;
-  height:     14px;
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
 }
